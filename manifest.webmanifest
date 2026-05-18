@@ -1,0 +1,29 @@
+{
+    "lang": "en",
+    "name": "Examples of Syncfusion JavaScript (ES5) UI Controls",
+    "description": "JavaScript PDF Library is a high-performance, non-UI class library. Easily read, create, and manipulate PDF documents programmatically without the need of Adobe Acrobat.",
+    "short_name": "EJ2 Angular",
+    "icons": [{
+        "src": "favicon.ico",
+        "sizes": "64x64"
+    }, {
+        "src": "favicon.ico",
+        "sizes": "128x128"
+    }],
+    "scope": "/racer/",
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "​​orientation": "portrait-primary",
+    "theme_color": "#FFFFFF",
+    "background_color": "#F8F8F8",
+    "serviceworker": {
+        "src": "sw.js",
+        "scope": "/racer/",
+        "update_via_cache": "none"
+    },
+    "related_applications": [{
+        "platform": "play",
+        "url": "https://play.google.com/store/apps/details?id=com.Syncfusion.ej2",
+        "id": "com.Syncfusion.ej2"
+    }]
+}

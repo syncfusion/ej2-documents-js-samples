@@ -1,0 +1,103 @@
+this.default = function () {
+    // Create a Syncfusion Button instance
+    var button = new ej.buttons.Button();
+    // Attach the button to the DOM element with id 'successbtn'
+    button.appendTo('#successbtn');
+    // Start PDF creation when the button is clicked
+    button.element.onclick = function () {
+        // Create a new PDF document
+        var pdf = new ej.pdf.PdfDocument();
+        // Add the first page to the document
+        var page = pdf.addPage();
+        // Embed different fonts with required families, sizes, and styles
+        var font1 = pdf.embedFont(ej.pdf.PdfFontFamily.helvetica, 14, ej.pdf.PdfFontStyle.bold);
+        var font2 = pdf.embedFont(ej.pdf.PdfFontFamily.helvetica, 12, ej.pdf.PdfFontStyle.regular);
+        var font3 = pdf.embedFont(ej.pdf.PdfFontFamily.timesRoman, 10, ej.pdf.PdfFontStyle.bold);
+        var font4 = pdf.embedFont(ej.pdf.PdfFontFamily.timesRoman, 10, ej.pdf.PdfFontStyle.italic);
+        var font5 = pdf.embedFont(ej.pdf.PdfFontFamily.timesRoman, 10, ej.pdf.PdfFontStyle.regular);
+        // Draw the heading text at the top of the page
+        page.graphics.drawString(
+            'List Features',
+            font1,
+            { x: 225, y: 10, width: 300, height: 100 },
+            new ej.pdf.PdfBrush({ r: 0, g: 0, b: 139 })
+        );
+        // Draw the descriptive paragraph below the heading
+        page.graphics.drawString(
+            'This sample demonstrates various features of bullets and lists. A list can be ordered and unordered. Essential PDF provides support for creating and formatting ordered and unordered lists.',
+            font2,
+            {
+                x: 0,
+                y: 50,
+                width: page.graphics.clientSize.width,
+                height: page.graphics.clientSize.height - 50
+            },
+            new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 })
+        );
+        // Create a string format to control line spacing
+        var format = new ej.pdf.PdfStringFormat();
+        format.lineSpacing = 10;
+        // Create the main unordered list items collection
+        var collection = new ej.pdf.PdfListItemCollection([
+            'List of Essential Studio products',
+            'IO products'
+        ]);
+        // Create the main unordered list with formatting options
+        var list = new ej.pdf.PdfUnorderedList(collection, {
+            format: format,
+            font: font3,
+            style: ej.pdf.PdfUnorderedListStyle.disk,
+            indent: 10,
+            textIndent: 10
+        });
+        // Create an ordered sublist for the first main list item
+        var subList = new ej.pdf.PdfOrderedList(
+            new ej.pdf.PdfListItemCollection(),
+            {
+                brush: new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 }),
+                indent: 20,
+                font: font4,
+                format: format
+            }
+        );
+        // Define product names to be added to the ordered sublist
+        var products = [
+            'Tools', 'Grid', 'Chart', 'Edit', 'Diagram',
+            'XlsIO', 'Grouping', 'Calculate', 'PDF',
+            'HTMLUI', 'DocIO'
+        ];
+        // Add each product as an item in the ordered sublist
+        products.forEach(function (s) {
+            subList.items.add(new ej.pdf.PdfListItem('Essential ' + s));
+        });
+        // Assign the ordered sublist to the first main list item
+        list.items.at(0).subList = subList;
+        // Create item collection for the second-level unordered sublist
+        var subSubCollection = new ej.pdf.PdfListItemCollection([
+            'Essential PDF: It is a .NET library with the capability to produce Adobe PDF files. It features a full-fledged object model for the easy creation of PDF files from any .NET language. It does not use any external libraries and is built from scratch in C#. It can be used on the server side (ASP.NET or any other environment) or with Windows Forms applications. Essential PDF supports many features for creating a PDF document. Drawing Text, Images, Shapes, etc can be drawn easily in the PDF document.',
+            'Essential DocIO: It is a .NET library that can read and write Microsoft Word files. It features a full-fledged object model similar to the Microsoft Office COM libraries. It does not use COM interop and is built from scratch in C#. It can be used on systems that do not have Microsoft Word installed. Here are some of the most common questions that arise regarding the usage and functionality of Essential DocIO.',
+            'Essential XlsIO: It is a .NET library that can read and write Microsoft Excel files (BIFF 8 format). It features a full-fledged object model similar to the Microsoft Office COM libraries. It does not use COM interop and is built from scratch in C#. It can be used on systems that do not have Microsoft Excel installed, making it an excellent reporting engine for tabular data.'
+        ]);
+        // Create a second-level unordered list with square bullet style
+        var subSubList = new ej.pdf.PdfUnorderedList(subSubCollection, {
+            brush: new ej.pdf.PdfBrush({ r: 0, g: 0, b: 0 }),
+            indent: 20,
+            font: font5,
+            format: format,
+            style: ej.pdf.PdfUnorderedListStyle.square
+        });
+        // Assign the second-level unordered list to the second main list item
+        list.items.at(1).subList = subSubList;
+        // Draw the complete list structure on the page
+        list.draw(page, {
+            x: 0,
+            y: 130,
+            width: page.graphics.clientSize.width,
+            height: page.graphics.clientSize.height - 130
+        });
+        // Save the generated PDF document
+        pdf.save('BulletsAndLists.pdf');
+        // Destroy the document instance to release memory
+        pdf.destroy();
+    };
+};
