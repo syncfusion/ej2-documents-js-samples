@@ -1,0 +1,262 @@
+{
+    "name": "PDF",
+    "directory": "pdf",
+    "category": "Document Processing Library",
+    "ftName": "pdf",
+    "type": "preview",
+    "samples": [
+        {
+            "url": "default",
+            "name": "Default",
+            "description": "This demo for Essential JS 2 Pdf shows the default rendering of the Pdf with minimum configuration.",
+            "category": "PDF",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "jobApplication",
+            "name": "Job Application",
+            "description": "This sample demonstrates the creation of job application form from the scratch using form fields. The user can fill the online job application, then download as a PDF document.",
+            "category": "PRODUCT SHOWCASE",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "helloWorld",
+            "name": "Hello World",
+            "description": "This sample demonstrates how to create a simple PDF document using JavaScript PDF library.",
+            "category": "GETTING STARTED",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "rtlText",
+            "name": "RTL Text",
+            "description": "This sample demonstrates drawing right-to-left language text in the PDF document. It is possible to draw RTL languages such as Arabic, Hebrew, Persian, Urdu and more.",
+            "category": "DRAWING TEXT",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "bulletsAndLists",
+            "name": "Bullets And Lists",
+            "description": "This sample demonstrates how to list the content in ordered and unordered list. The ordered list can be number or alphabets and the unordered list can be bullets, circles, and images.",
+            "category": "DRAWING TEXT",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "shapes",
+            "name": "Shapes",
+            "description": "This sample demonstrates drawing of shapes such as Ellipse, Arcs, Polygon, Pie, and Rectangle in the PDF document.",
+            "category": "GRAPHICS",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "imageInsertion",
+            "name": "Image Insertion",
+            "description": "This sample demonstrates insertion of JPEG and PNG images in the PDF document. This sample also demonstrates the image masking capability in the Syncfusion JavaScript PDF library.",
+            "category": "GRAPHICS",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "extractImage",
+            "name": "Extract Image",
+            "description": "This sample demonstrates how to extract images from the PDF document. The extracted images can be saved into any raster image format.",
+            "category": "IMPORT AND EXPORT",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "extractText",
+            "name": "Extract Text",
+            "description": "This sample demonstrates how to extract the text from the PDF document.",
+            "category": "IMPORT AND EXPORT",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "digitalSignature",
+            "name": "Digital Signature",
+            "description": "This sample demonstrates how to digitally sign the PDF document with the PFX certificate file. It is possible to digitally sign with X509 certificates such as .pfx files with private keys.",
+            "category": "SECURITY",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "redaction",
+            "name": "Redaction",
+            "description": "This sample demonstrates redacting a text from the PDF document. It is also possible to redact the images. The redaction is a process of removing sensitive or unwanted information from the PDF document.",
+            "category": "SECURITY",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "documentSettings",
+            "name": "Document Settings",
+            "description": "This sample demonstrates adding PDF document properties such as title, author, keyword, subject, and producer etc.",
+            "category": "SETTINGS",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "pageSettings",
+            "name": "Page Settings",
+            "description": "This sample demonstrates how to digitally sign the PDF document with the PFX certificate file. It is possible to digitally sign with X509 certificates such as .pfx files with private keys.",
+            "category": "SETTINGS",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "layer",
+            "name": "Layers",
+            "description": "This sample demonstrates adding layers (Optional Content Group) with different shapes in the PDF document.",
+            "category": "SETTINGS",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "annotations",
+            "name": "Annotations",
+            "description": "This sample demonstrates the creation of different type of annotations such as ink, free text, pop up, text markup, rich media annotation and more.",
+            "category": "USER INTERACTIONS",
+            "type": "new",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "formFillings",
+            "name": "Form Filling",
+            "description": "This sample shows how to fill the existing form fields in a PDF document. It also supports flattening the form fields.",
+            "category": "USER INTERACTIONS",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "bookmark",
+            "name": "Bookmarks",
+            "description": "This sample demonstrates how to add bookmark with the different style in the document.",
+            "category": "USER INTERACTIONS",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "mergeDocuments",
+            "name": "Merge Documents",
+            "description": "This sample demonstrates how to merge two different PDF documents into single PDF document. It is also possible to import selective pages to the PDF document.",
+            "category": "MODIFY DOCUMENTS",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "splitPdf",
+            "name": "Split PDF",
+            "description": "This sample demonstrates how to digitally sign the PDF document with the PFX certificate file. It is possible to digitally sign with X509 certificates such as .pfx files with private keys.",
+            "category": "MODIFY DOCUMENTS",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "watermarkPdf",
+            "name": "Watermark PDF",
+            "description": "This sample demonstrates how to stamp an existing PDF document using text. The Essential PDF supports both stamp or watermark with text and images in the PDF document.",
+            "category": "MODIFY DOCUMENTS",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        },
+        {
+            "url": "rearrangePages",
+            "name": "Rearrange Pages",
+            "description": "This sample demonstrates how to rearrange pages from an existing PDF document to make the document meaningful.",
+            "category": "MODIFY DOCUMENTS",
+            "api": {
+                "Pdf": [
+                    "serviceUrl",
+                    "documentPath"
+                ]
+            }
+        }
+    ]
+}

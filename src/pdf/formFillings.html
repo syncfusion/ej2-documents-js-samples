@@ -1,0 +1,156 @@
+<div class="control-section">
+    <p class="description">
+        Please note that Adobe Reader or its equivalent is required to view the resultant document.
+    </p>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" placeholder="John Milton" value="John Milton" />
+    </div>
+    <div class="form-group">
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+            <option value="Male" selected>Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="dob">Date of Birth</label>
+        <input id="dob" name="dob" type="date" value="2012-12-05" />
+    </div>
+    <div class="form-group">
+        <label for="email">Email ID</label>
+        <input id="email" name="email" type="email" placeholder="john.milton@example.com"
+            value="john.milton@example.com" />
+    </div>
+    <div class="form-group">
+        <label for="state">Coming from</label>
+        <select id="state" name="state">
+            <option value="Alabama" selected>Alabama</option>
+            <option value="Alaska">Alaska</option>
+            <option value="Arizona">Arizona</option>
+            <option value="Arkansas">Arkansas</option>
+            <option value="California">California</option>
+            <!-- add more states as needed -->
+        </select>
+    </div>
+    <!-- Newsletter -->
+    <div class="form-group">
+        <div class="inline">
+            <input id="newsletter" name="newsletter" type="checkbox" />
+            <label for="newsletter" style="font-weight: 600; margin-top:10px;">Would you like to receive our
+                Newsletter?</label>
+        </div>
+    </div>
+    <!-- Buttons -->
+    <div class="btn-row">
+        <button id="btnViewTemplate" onclick="viewPdf()" class="e-btn">View Template</button>
+        <button id="btnFillForm" onclick="fillPdf('fill')" class="e-btn">Fill Form</button>
+        <button id="btnFillFlatten" onclick="fillPdf('flatten')" class="e-btn">Fill And Flatten</button>
+    </div>
+</div>
+<div id="action-description">
+    <p>
+        This sample demonstrates how to fill and flatten the form fields to personalize your PDF document.It is also
+        possible to create, edit, and delete the form fields using the JavaScript PDF Library.
+    </p>
+</div>
+
+<div id="description">
+    <p>More information about the forms can be found in this documentation <a
+            href="https://help.syncfusion.com/document-processing/pdf/pdf-library/javascript/formfields">section</a>.
+    </p>
+</div>
+
+<style>
+    :root {
+        --bg: #f7f7f7;
+        --border: #d6d6d6;
+        --text: #333;
+        --primary: #4a90e2;
+        --btn-bg: #e9ecef;
+    }
+
+    body {
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        margin: 0;
+        padding: 24px;
+    }
+
+    .card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        padding: 16px 16px 24px;
+        max-width: 920px;
+        margin: 0 auto;
+    }
+
+    .description {
+        font-size: 14px;
+        margin-bottom: 12px;
+        color: #4a4a4a;
+    }
+
+    .form-group {
+        margin-bottom: 12px;
+    }
+
+    label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select {
+        width: 100%;
+        padding: 8px 10px;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        font-size: 14px;
+        box-sizing: border-box;
+        background: #fff;
+    }
+
+    .inline {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 4px;
+    }
+
+    .btn-row {
+        display: flex;
+        gap: 12px;
+        margin-top: 14px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        background: var(--btn-bg);
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        padding: 8px 14px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .btn.primary {
+        background: var(--primary);
+        color: #fff;
+        border-color: var(--primary);
+    }
+
+    pre {
+        background: #0f172a;
+        color: #e2e8f0;
+        padding: 12px;
+        border-radius: 6px;
+        overflow: auto;
+    }
+</style>
